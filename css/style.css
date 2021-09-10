@@ -11,8 +11,18 @@ body {
   justify-content: center;
   align-items: center;
 }
+.container {
+  position: relative;
+  width: 50vh;
+  height: 50vh;
+  background-color: black;
+}
 .circle {
-  position: fixed;
+  position: absolute;
+  /* top: 50%; 
+  left: 50%;
+  transform: translate(-50%, -50%); 
+  if it will be activated, js work strange*/
   border-radius: 50%;
   width: 100px;
   height: 100px;
