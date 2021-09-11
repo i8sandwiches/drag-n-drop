@@ -11,23 +11,22 @@ function dragDrop(e) {
     let shiftX = e.clientX - circle.getBoundingClientRect().left;
     let shiftY = e.clientY - circle.getBoundingClientRect().top;
 
-    window.addEventListener("mousemove", drop);
+    //drag effect
+    circle.addEventListener("mousemove", drag);
     // '.circle' follow on mouse //
-    function drop(e) {
+    function drag(e) {
         circle.style.left = e.pageX - shiftX + "px";
         circle.style.top = e.pageY - shiftY + "px";
     }
     //////////////////////////////////////////////////////////////
+    //drop effect
+    circle.addEventListener("mouseup", drop);
 
-    // circle.addEventListener("mouseup", ()=> {
-
-    // })
+    function drop () {
+        circle.removeEventListener("mousemove", drag);
+    }
     //////////////////////////////////////////////////////////////
-    // container.addEventListener("mouseleave", whenMouseOut);
-
-    // function whenMouseOut() {
-        
-    // }
-
-    // if ()
 }
+
+
+
