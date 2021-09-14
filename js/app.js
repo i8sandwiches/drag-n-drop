@@ -1,5 +1,5 @@
 const circle = document.querySelector(".circle");
-// const container = document.querySelector(".container");
+const container = document.querySelector(".container");
 
 //while you press left mouse button, activate 'onmosuedown'
 circle.addEventListener("mousedown", dragDrop);
@@ -13,6 +13,8 @@ function dragDrop(e) {
 
     //drag effect
     circle.addEventListener("mousemove", drag);
+
+
     // '.circle' follow on mouse //
     function drag(e) {
         circle.style.left = e.pageX - shiftX + "px";
@@ -27,6 +29,4 @@ function dragDrop(e) {
     }
     //////////////////////////////////////////////////////////////
 }
-
-
 
